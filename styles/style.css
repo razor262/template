@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ----------------------- */
+/* font */
+/* ------------------------ */
+@font-face {
+    font-family: "TenorSans";
+    font-display: swap;
+    src: local("TenorSans"),
+        url("../fonts/Tenor_Sans/TenorSans-Regular.ttf") format("ttf"); 
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Exo2";
+    font-display: swap;
+    src: local("Exo2"), 
+        url("../fonts/Exo_2/Exo2-VariableFont_wght.ttf") format("ttf");   
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0px 15px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
