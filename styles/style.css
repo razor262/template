@@ -11,23 +11,22 @@
     font-family: "TenorSans";
     font-display: swap;
     src: local("TenorSans"),
-        url("../fonts/Tenor_Sans/TenorSans-Regular.ttf") format("ttf"); 
+        url("../fonts/Tenor_Sans/TenorSans-Regular.ttf") format("ttf");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Exo2";
+    font-family: "Exo 2";
     font-display: swap;
-    src: local("Exo2"), 
-        url("../fonts/Exo_2/Exo2-VariableFont_wght.ttf") format("ttf");   
+    src: local("Exo 2"),
+        url("../fonts/Exo_2/Exo2-VariableFont_wght.ttf") format("ttf");
     font-weight: 400;
     font-style: normal;
 }
 
-
 .container {
-    max-width: 1200px;
+    max-width: 1180px;
     width: 100%;
     padding: 0px 15px;
     margin: 0 auto;
@@ -39,4 +38,186 @@ body {
     padding: 0;
     overflow-x: hidden;
 }
+.off {
+    display: none;
+}
+/* ---------------------------- */
+/* burger-menu start */
+/* ---------------------------- */
+body {
+    font-family: TenorSans;
+    margin: 0;
+    /* background-color: #587c95 !important; */
+    /*  font-family: "Fredoka One", "AsimovPrintB", cursive;*/
+    transition: opacity 2s ease-in-out;
+}
 
+.active-body {
+    overflow: hidden;
+}
+
+/* бургер-меню */
+.header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: gray;
+}
+
+.header__couple-image {
+    display: flex;
+}
+
+/* Гамбургер иконка */
+.menu-btn {
+    cursor: pointer;
+    margin: 17px 0;
+    width: 35px;
+    height: 24px;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+}
+
+@media (min-width: 1101px) {
+    .header__couple-image {
+        display: none;
+    }
+}
+
+.menu-btn span {
+    border-radius: 5px;
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222222;
+    transition: all 0.5s;
+}
+
+.menu-btn span:nth-of-type(2) {
+    top: calc(50% - 5px);
+}
+
+.menu-btn span:nth-of-type(3) {
+    top: calc(50% + 5px);
+}
+
+/* Меняем гамбургер иконку, когда меню открыто */
+.menu-btn.active span:nth-of-type(1) {
+    display: none;
+}
+
+.menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);
+}
+
+.menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg);
+}
+
+/* Меню, которое будет появляться */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 430px;
+    height: 860px;
+    padding: 15px;
+    background: #CCCCCC;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+    z-index: 2;
+}
+
+@media (max-width: 1100px) {
+    .menu {
+        padding-top: 125px;
+    }
+}
+
+.menu.active {
+    transform: translateX(0);
+}
+
+.menu li {
+    list-style-type: none;
+}
+
+/* ----------------------------- */
+/* burger-menu end */
+/* ----------------------------- */
+.menu_one {
+    width: 35px;
+}
+
+.menu_two {
+    width: 25px;
+}
+
+.menu_tree {
+    width: 17px;
+}
+
+.header-item a {
+    text-decoration: none;
+    color: #C39B54;
+    font-family: Exo 2;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    letter-spacing: 0.05em;
+    text-align: left;
+
+}
+
+.mr-120 {
+    margin-right: 120px;
+}
+
+/* ----------------------------- */
+/* btn */
+/* ----------------------------- */
+.btn {
+    border: none;
+    width: 213px;
+    height: 54px;
+    left: 1315px;
+    padding: 5px 10px;
+    border-radius: 30px;
+    background-color: #C39B54;
+
+    font-family: Exo 2;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    letter-spacing: 0.05em;
+    color: #FCFAF3;
+
+}
+
+.menu nav {
+    display: flex;
+    justify-content: center;
+}
+
+.menu_close {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px;
+}
+
+.menu li {
+    padding: 10px 0px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #FCFAF3;
+}
